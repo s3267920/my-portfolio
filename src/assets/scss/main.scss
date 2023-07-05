@@ -26,10 +26,9 @@ html * {
 }
 
 #app {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-
   font-weight: normal;
 }
 
@@ -47,6 +46,9 @@ header {
 .main {
   color: #232129;
   padding-top: 0;
+  .full {
+    min-height: 100vh;
+  }
 }
 .header {
   margin-top: 0;
