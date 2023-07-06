@@ -26,9 +26,10 @@ html * {
 }
 
 #app {
+  min-width: 450px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   font-weight: normal;
   overflow-x: hidden;
 }
@@ -47,9 +48,9 @@ header {
 .main {
   color: #232129;
   padding-top: 0;
-  animation: book 1s linear 1;
+  // animation: book 1s linear 1;
   .full {
-    min-height: 100vh;
+    // min-height: 100vh;
     margin: 0;
     border-radius: 0.5rem;
     backface-visibility: hidden;
@@ -75,6 +76,7 @@ header {
   }
 }
 .header {
+  // grid-template-columns: repeat(auto-fill, minmax(180px, 2fr));
   margin-top: 0;
   .title {
     box-shadow: 0 0 0px 2px #ffffff;
