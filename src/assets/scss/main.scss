@@ -30,6 +30,7 @@ html * {
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  overflow-x: hidden;
 }
 
 @media (hover: hover) {
@@ -46,16 +47,19 @@ header {
 .main {
   color: #232129;
   padding-top: 0;
+  animation: book 1s linear 1;
   .full {
     min-height: 100vh;
     margin: 0;
     border-radius: 0.5rem;
-    animation: book 2s linear 1;
     backface-visibility: hidden;
     position: relative;
     opacity: 1;
     z-index: 5;
     transform-style: preserve-3d;
+  }
+  .all-info {
+    backface-visibility: hidden;
   }
 }
 

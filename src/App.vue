@@ -5,11 +5,39 @@ import TheHeader from '@/components/TheHeader.vue'
 
 <template>
   <TheHeader />
-  <main className='main grid'>
-    <RouterView />
+  <main className='main grid bg-white shadow-md rounded-lg'>
+    <router-view v-slot="{ Component, route }">
+      <transition name="page" mode="out-in">
+        <component :is="Component" :key="route.path" />
+      </transition>
+    </router-view>
   </main>
 </template>
+
 <style lang="scss">
 @import "@/assets/scss/main.scss";
-</style>
 
+.page-enter-active {
+  animation: pageSlide 1s ease-in 1;
+  transform-style: preserve-3d;
+}
+
+.page-leave-active {
+  transform-style: preserve-3d;
+  animation: pageSlide 1s linear 1 reverse;
+}
+
+@keyframes pageSlide {
+  0% {
+    transform: rotateY(180deg) translate(500px, 0);
+  }
+
+  40% {
+    transform: rotateY(90deg) translate(100px, 0);
+  }
+
+  100% {
+    transform: rotateY(0deg) translate(0, 0);
+  }
+}
+</style>
