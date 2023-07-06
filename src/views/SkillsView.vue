@@ -1,110 +1,41 @@
 <script setup lang="ts">
+import { fetchData } from '@/server/fetchData'
 import SkillItem from '@/components/skills/SkillItem.vue'
 export interface SkillInfoProps {
   title: string
   icon?: string
+  level?: number
   detail?: SkillInfoProps[]
 }
-const data: { [key: string]: SkillInfoProps } =
-{
-  frontEnd: {
-    title: 'Front-End',
-    detail: [
-      {
-        title: 'React.js',
-        icon: '',
-        detail: [
-          { title: 'React Hook' }
-        ]
-      },
-      {
-        title: 'Vue.js',
-        icon: '',
-        detail: [
-          { title: 'Vue2' }
-        ]
-      },
-      {
-        title: 'JavaScript',
-        icon: '',
-        detail: [
-          { title: 'ES6' }
-        ]
-      },
-      {
-        title: 'TypeScript',
-      }
-    ]
-  },
-  backEnd: {
-    title: 'Back-End',
-    detail: [
-      { title: 'RESTful API' },
-      {
-        title: 'ASP.NET',
-      },
-      {
-        title: '.NET FRAMEWORK',
-        detail: [
-          { title: 'MVC' },
-          { title: 'Web API' },
-        ]
-      },
-      {
-        title: 'Database',
-        detail: [
-          { title: 'MS SQL' },
-        ]
-      }
-    ]
-  },
-  webLayout: {
-    title: 'Web Layout',
-    detail: [
-      {
-        title: 'HTML',
-      },
-      {
-        title: 'CSS',
-        detail: [
-          { title: 'SCSS' },
-        ]
-      }, {
-        title: 'Responsive Web Design(RWD)'
-      }
-    ]
-  },
-  other: {
-    title: 'Other',
-    detail: [
-      { title: 'Git' },
-      {
-        title: 'CI/CD',
-        detail: [
-          { title: 'Jenkins' }
-        ]
-      },
-      {
-        title: 'AWS',
-        detail: [
-          { title: 'EC2' },
-          { title: 'S3' },
-          { title: 'CloudFront' },
-        ]
-      }
-    ]
-  }
-}
-defineProps<{
+const props = defineProps<{
   isSection?: boolean,
 }>()
 </script>
+<script lang="ts">
+export default {
+  data() {
+    return {
+      data: null as { [key: string]: SkillInfoProps } | null
+    }
+  },
+  methods: {
+    async getSkillInfo() {
+      const data: { [key: string]: SkillInfoProps } = await fetchData('/data/skill.json')
+      this.data = data
+    }
+  },
+  mounted() {
+    this.getSkillInfo()
+  },
+}
+</script>
 <template>
-  <section class='skill p-2 m-5 shadow-md bg-white grid grid-cols-2 gap-4 relative' :class="{ full: !isSection }">
-    <SkillItem class="frontEnd" :data="data.frontEnd" />
-    <SkillItem class="backEnd" :data="data.backEnd" />
-    <SkillItem class="webLayout" :data="data.webLayout" />
-    <SkillItem class="other" :data="data.other" />
+  <section v-if="data" class='skill p-2 m-5 shadow-md bg-white grid grid-cols-2 gap-4 relative'
+    :class="{ full: !props.isSection, 'p-5': !props.isSection }">
+    <SkillItem class="frontEnd-area" :data="data.frontEnd" />
+    <SkillItem class="backEnd-area" :data="data.backEnd" />
+    <SkillItem class="webLayout-area" :data="data.webLayout" />
+    <SkillItem class="other-area" :data="data.other" />
 
   </section>
 </template>
@@ -116,19 +47,19 @@ defineProps<{
       'front-end back-end'
       'webLayout other';
 
-    .frontEnd {
+    .frontEnd-area {
       grid-area: front-end;
     }
 
-    .backEnd {
+    .backEnd-area {
       grid-area: back-end;
     }
 
-    .webLayout {
+    .webLayout-area {
       grid-area: webLayout;
     }
 
-    .other {
+    .other-area {
       grid-area: other;
     }
   }
