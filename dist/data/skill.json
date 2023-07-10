@@ -1,0 +1,76 @@
+{
+  "frontEnd": {
+    "title": "Front-End",
+    "detail": [
+      {
+        "title": "React.js",
+        "icon": "",
+        "level": "",
+        "detail": [{ "title": "React Hook" }]
+      },
+      {
+        "title": "Vue.js",
+        "icon": "",
+        "detail": []
+      },
+      {
+        "title": "JavaScript",
+        "icon": "",
+        "detail": [{ "title": "ES6" }]
+      },
+      {
+        "title": "TypeScript"
+      }
+    ]
+  },
+  "backEnd": {
+    "title": "Back-End (Experience)",
+    "detail": [
+      { "title": "RESTful API" },
+      {
+        "title": "ASP.NET"
+      },
+      {
+        "title": ".NET FRAMEWORK",
+        "detail": [{ "title": "MVC" }, { "title": "Web API" }]
+      },
+      {
+        "title": "Database",
+        "detail": [{ "title": "MS SQL" }]
+      }
+    ]
+  },
+  "webLayout": {
+    "title": "Web Layout",
+    "detail": [
+      {
+        "title": "HTML"
+      },
+      {
+        "title": "CSS",
+        "detail": [{ "title": "SCSS" }]
+      },
+      {
+        "title": "Responsive Web Design(RWD)"
+      },
+      {
+        "title": "UI Framework",
+        "detail": [{ "title": "MUI" }]
+      }
+    ]
+  },
+  "other": {
+    "title": "Other",
+    "detail": [
+      { "title": "Git" },
+      {
+        "title": "CI/CD",
+        "detail": [{ "title": "Jenkins" }]
+      },
+      {
+        "title": "AWS",
+        "detail": [{ "title": "EC2" }, { "title": "S3" }, { "title": "CloudFront" }]
+      }
+    ]
+  }
+}

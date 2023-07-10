@@ -1,0 +1,16 @@
+{
+  "en": [
+    {
+      "school": "Shih Chien University",
+      "department": "Fashion Styling and Design Communica",
+      "time": { "start": "2014", "end": "2018" }
+    }
+  ],
+  "zh-TW": [
+    {
+      "school": "實踐⼤學",
+      "department": "時尚設計學系",
+      "time": { "start": "2014", "end": "2018" }
+    }
+  ]
+}
