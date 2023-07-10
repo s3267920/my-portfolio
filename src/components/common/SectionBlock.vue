@@ -4,7 +4,7 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-	<section class='p-2 m-5 shadow-md bg-white  flex flex-col print:m-2 print:shadow-none '
+	<section class='p-2 m-5 shadow-md bg-white  flex flex-col print:m-2 print:shadow-none print:p-2'
 		:class="{ full: !props.isSection, 'p-5': !props.isSection }">
 		<slot></slot>
 	</section>

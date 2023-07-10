@@ -7,13 +7,13 @@ import OtherView from './OtherView.vue';
 </script>
 
 <template>
-  <div class=''>
+  <div>
     <Suspense>
-      <div className='all-info grid  row-start-2 min-h-screen'>
+      <div className='all-info grid row-start-2 min-h-screen'>
         <SkillsView is-section />
         <ExperienceView is-section />
+        <OtherView is-section class="print-hidden " />
         <EducationView />
-        <OtherView is-section />
       </div>
       <template #fallback>
         <SectionBlock>Loading...</SectionBlock>

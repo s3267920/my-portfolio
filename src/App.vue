@@ -5,7 +5,7 @@ import TheHeader from '@/components/TheHeader.vue'
 
 <template>
   <TheHeader />
-  <main className='main grid bg-white shadow-md rounded-lg'>
+  <main class='main grid bg-white shadow-md rounded-lg print:shadow-none flex-1'>
     <router-view v-slot="{ Component, route }">
       <transition name="page" mode="out-in">
         <component :is="Component" :key="route.path" />
@@ -29,6 +29,7 @@ import TheHeader from '@/components/TheHeader.vue'
 
 @keyframes pageSlide {
   0% {
+    min-height: calc(100vh - 4rem);
     transform: rotateY(180deg) translate(500px, 0);
   }
 
@@ -37,6 +38,7 @@ import TheHeader from '@/components/TheHeader.vue'
   }
 
   100% {
+    min-height: auto;
     transform: rotateY(0deg) translate(0, 0);
   }
 }
