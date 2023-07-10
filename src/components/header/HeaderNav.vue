@@ -3,13 +3,13 @@ import { RouterLink } from 'vue-router'
 import SwitchLanguageButton from '@/components/header/SwitchLanguageButton.vue'
 </script>
 <template>
-	<div class="wrapper flex  order-2 col-start-1 md:col-start-5 col-end-13   lg:col-start-1 lg:col-end-5">
+	<div class="wrapper flex order-2 col-start-1 md:col-start-5 col-end-13   lg:col-start-1 lg:col-end-5">
 		<nav>
 			<RouterLink aria-label="All Info" class="rounded-sm" to="/">All</RouterLink>
 			<RouterLink aria-label="Skills" class="rounded-sm" to="/skills">Skills</RouterLink>
-			<RouterLink aria-label="Experience" class="rounded-sm" to="/experience">Experience</RouterLink>
+			<RouterLink aria-label="Work Experience" class="rounded-sm" to="/experience">Experience</RouterLink>
 			<RouterLink aria-label="Other" class="rounded-sm" to="/other">Other</RouterLink>
-			<SwitchLanguageButton />
+			<SwitchLanguageButton class="ml-1" />
 		</nav>
 	</div>
 </template>

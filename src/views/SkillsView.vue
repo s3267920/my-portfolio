@@ -25,7 +25,7 @@ onMounted(() => {
 <template>
   <SectionBlock class='relative' :is-section="props.isSection">
     <SectionTitle>SKILLS</SectionTitle>
-    <div v-if="data" class='skill w-full bg-white grid grid-cols-2 grid-rows-2 gap-4'>
+    <div v-if="data" class='skill w-full bg-white grid grid-cols-2 grid-rows-2 gap-2'>
       <SkillItem class="frontEnd-area" :data="data.frontEnd" />
       <SkillItem class="backEnd-area" :data="data.backEnd" />
       <SkillItem class="webLayout-area" :data="data.webLayout" />

@@ -19,6 +19,7 @@ const toggleLanguage = (value: langKey) => {
 .btn-switch-lang {
 	button {
 		@apply text-cyan-800;
+		transition: box-shadow 0.5s ease-in-out, background-color 0.2s linear;
 
 		&:not(.active) {
 			@apply relative border-b-0 mr-0 shadow-cyan-950;
