@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { fetchData } from '@/server/fetchData'
+import SectionBlock from '@/components/common/SectionBlock.vue'
+import SectionTitle from '@/components/common/SectionTitle.vue'
 import SkillItem from '@/components/skills/SkillItem.vue'
+import { onMounted, ref } from 'vue'
 export interface SkillInfoProps {
   title: string
   icon?: string
@@ -10,34 +13,26 @@ export interface SkillInfoProps {
 const props = defineProps<{
   isSection?: boolean,
 }>()
-</script>
-<script lang="ts">
-export default {
-  data() {
-    return {
-      data: null as { [key: string]: SkillInfoProps } | null
-    }
-  },
-  methods: {
-    async getSkillInfo() {
-      const data: { [key: string]: SkillInfoProps } = await fetchData('/data/skill.json')
-      this.data = data
-    }
-  },
-  mounted() {
-    this.getSkillInfo()
-  },
+const data = ref<{ [key: string]: SkillInfoProps } | null>(null);
+const getSkillInfo = async () => {
+  const result: { [key: string]: SkillInfoProps } = await fetchData('/data/skill.json')
+  data.value = result
 }
+onMounted(() => {
+  getSkillInfo()
+})
 </script>
 <template>
-  <section v-if="data" class='skill p-2 m-5 shadow-md bg-white grid grid-cols-2 gap-4 relative'
-    :class="{ full: !props.isSection, 'p-5': !props.isSection }">
-    <SkillItem class="frontEnd-area" :data="data.frontEnd" />
-    <SkillItem class="backEnd-area" :data="data.backEnd" />
-    <SkillItem class="webLayout-area" :data="data.webLayout" />
-    <SkillItem class="other-area" :data="data.other" />
+  <SectionBlock class='relative' :is-section="props.isSection">
+    <SectionTitle>SKILLS</SectionTitle>
+    <div v-if="data" class='skill w-full bg-white grid grid-cols-2 grid-rows-2 gap-4'>
+      <SkillItem class="frontEnd-area" :data="data.frontEnd" />
+      <SkillItem class="backEnd-area" :data="data.backEnd" />
+      <SkillItem class="webLayout-area" :data="data.webLayout" />
+      <SkillItem class="other-area" :data="data.other" />
+    </div>
 
-  </section>
+  </SectionBlock>
 </template>
 
 <style lang='scss'>
