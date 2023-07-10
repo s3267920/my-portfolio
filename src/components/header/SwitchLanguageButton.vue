@@ -12,7 +12,7 @@ const toggleLanguage = (value: langKey) => {
 		<button class="p-1 border-r-2 border-neutral-400 border-opacity-50 last:border-r-0"
 			v-for="(lang, key) in languages" :key="key"
 			:class="{ active: localeStore.currentLocale === key }"
-			@click="toggleLanguage(key)">{{ lang }}</button>
+			@click="toggleLanguage(key)" :aria-label="lang" :aria-details="'Switch to ' + lang">{{ lang }}</button>
 	</div>
 </template>
 <style lang="scss">
@@ -21,16 +21,22 @@ const toggleLanguage = (value: langKey) => {
 		@apply text-cyan-800;
 
 		&:not(.active) {
-			@apply relative shadow-lg shadow-cyan-950;
+			@apply relative border-b-0 mr-0 shadow-cyan-950;
 
-			&:first-of-type {
-				@apply rounded-s-md;
-				box-shadow: 0px 3px 1px 1px;
+			&::after {
+				@apply absolute shadow-lg w-[100%] h-[98%] left-0 top-[-1px];
+				content: '';
 			}
 
-			&:last-of-type {
+			&:first-of-type::after {
+				@apply rounded-s-md;
+				box-shadow: 0px 2px 0px 2px;
+
+			}
+
+			&:last-of-type::after {
 				@apply rounded-e-md;
-				box-shadow: 0 3px 0px 1px;
+				box-shadow: 0 2px 0px 1px;
 			}
 
 			&:hover {
