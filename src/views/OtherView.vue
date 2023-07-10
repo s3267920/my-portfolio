@@ -1,15 +1,17 @@
+<script setup lang="ts">
+import SectionBlock from '@/components/common/SectionBlock.vue'
+import SectionTitle from '@/components/common/SectionTitle.vue'
+import AboutMe from '@/components/other/AboutMe.vue';
+const props = defineProps<{
+  isSection?: boolean,
+}>()
+</script>
 <template>
-  <div class="other">
-    <h1>This is an Other page</h1>
-  </div>
+  <SectionBlock class='other ' :is-section="props.isSection">
+    <SectionTitle>About Me</SectionTitle>
+    <AboutMe class="mt-2"></AboutMe>
+    <p class=" p-2 mt-auto text-right text-neutral-400 text-lg">
+      Email: s3267920@gmail.com
+    </p>
+  </SectionBlock>
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .other {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
