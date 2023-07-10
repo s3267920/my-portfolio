@@ -1,6 +1,7 @@
 @import '../base.css';
 html * {
   scrollbar-width: thin;
+  scrollbar-gutter: stable both-edges;
   scrollbar-color: var(--color-scrollbar) #efefef;
   scrollbar-base-color: #efefef;
   scrollbar-face-color: var(--color-scrollbar);
@@ -24,16 +25,27 @@ html * {
     height: 10px;
   }
 }
-
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body {
+  width: 100vw;
+  overflow: hidden;
+  scrollbar-gutter: stable both-edges;
+  padding: 0 calc(100vw - 100%);
+}
 #app {
+  @apply flex flex-col min-h-screen overflow-x-hidden font-normal;
   // min-width: 425px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 0.5rem;
-  font-weight: normal;
-  overflow-x: hidden;
   @media screen and (min-width: 600px) {
     padding: 2rem 1.5rem;
+  }
+  @media print {
+    padding: 0;
   }
 }
 
@@ -44,7 +56,7 @@ html * {
 }
 @page {
   size: A4 portrait;
-  margin: 0.75rem;
+  margin: 1rem 1cm;
 }
 header {
   line-height: 1.5;
@@ -54,7 +66,7 @@ header {
 .main {
   color: #232129;
   padding-top: 0;
-  // animation: book 1s linear 1;
+  animation: book 1s linear 1;
   .full {
     margin: 0;
     border-radius: 0.5rem;
@@ -68,7 +80,11 @@ header {
     backface-visibility: hidden;
   }
 }
-
+.print-hidden {
+  @media print {
+    display: none;
+  }
+}
 @keyframes book {
   0% {
     transform: rotateY(180deg) translate(500px, 0);
