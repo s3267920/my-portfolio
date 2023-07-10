@@ -26,19 +26,25 @@ html * {
 }
 
 #app {
-  min-width: 450px;
+  // min-width: 425px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 1rem 0.5rem;
   font-weight: normal;
   overflow-x: hidden;
+  @media screen and (min-width: 600px) {
+    padding: 2rem 1.5rem;
+  }
 }
 
 @media (hover: hover) {
   a:hover {
-    color: var(--vt-c-white);
-    background-color: var(--color-cyan-06);
+    @apply text-white  bg-cyan-800/60;
   }
+}
+@page {
+  size: A4 portrait;
+  margin: 0.75rem;
 }
 header {
   line-height: 1.5;
@@ -50,7 +56,6 @@ header {
   padding-top: 0;
   // animation: book 1s linear 1;
   .full {
-    // min-height: 100vh;
     margin: 0;
     border-radius: 0.5rem;
     backface-visibility: hidden;
@@ -75,23 +80,5 @@ header {
     transform: rotateY(0deg) translate(0, 0);
   }
 }
-.header {
-  // grid-template-columns: repeat(auto-fill, minmax(180px, 2fr));
-  margin-top: 0;
-  .title {
-    box-shadow: 0 0 0px 2px #ffffff;
-    max-height: 12rem;
-    &::before {
-      background-color: #2a3944;
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: -8px;
-      bottom: -8px;
-      border-radius: 0.5rem;
-      z-index: -1;
-      box-shadow: 0 0 4px 4px #2a3944;
-    }
-  }
-}
+
+@import './_common.scss';
