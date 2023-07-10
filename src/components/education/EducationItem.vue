@@ -5,10 +5,10 @@ defineProps<{
 }>()
 </script>
 <template>
-	<div class="p-3 flex">
-		<div class="text-cyan-900 text-2xl font-bold">
+	<div class="p-3 flex text-xl">
+		<div class="text-cyan-900  font-bold">
 			{{ data.school }} - {{ data.department }}
 		</div>
-		<span class="text-cyan-700 text-2xl font-bold ml-2">{{ data.time.start }} ~ {{ data.time.end }}</span>
+		<span class="text-cyan-700  font-bold ml-2">{{ data.time.start }} ~ {{ data.time.end }}</span>
 	</div>
 </template>
