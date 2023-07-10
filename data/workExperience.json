@@ -1,0 +1,123 @@
+{
+  "en": [
+    {
+      "companyName": "BeyondSoft",
+      "title": "Frontend Developer",
+      "time": {
+        "start": "2022/03",
+        "end": "Now"
+      },
+      "description": [
+        "Responsible for overall website design and front-end development . ",
+        "Utilized TypeScript and React with Material UI UI framework for front-end development .",
+        "Implemented visualized dashboard using D3.js .",
+        "Deployed on AWS and utilized CloudFront for website presentation .",
+        "Optimize the website to reduce loading speed. "
+      ]
+    },
+    {
+      "companyName": "RiChi Technology Inc.",
+      "title": "Engineer ",
+      "time": {
+        "start": "2019/06",
+        "end": "2022/02"
+      },
+      "description": [
+        "Build websites with Vue, JQuery, and Google Maps API  for the front end, using the .NET Framework for the back end.",
+        "Teamwork with other engineers, developed complex map manipulation websites,  gave user information visualization, and also, I have worked independently on two projects.",
+        "Led small team with 2 engineers through development, planned the whole project, designed schema, and built software architecture.",
+        "Introduce Vue to the projects, reduce program development time and let code become more readable and maintainable."
+      ]
+    }
+  ],
+  "zh-TW": [
+    {
+      "companyName": "BeyondSoft 博彥科技",
+      "title": "前端工程師 Frontend Developer",
+      "time": {
+        "start": "2022/03",
+        "end": "現在"
+      },
+      "description": [
+        "使用技術為React Hook、TypeScript與MUI",
+        "使用過selenium nodeJS搭配cucumber 做簡易BDD的E2E測試"
+      ],
+      "experience": [
+        {
+          "projectName": "資產管理系統",
+          "description": [
+            "負責站台整體頁面版面規劃設計與專案架構",
+            "技術上CRA為基礎框架，並使用TypeScript 與 React.js 搭配 MUI UI框架進行開發",
+            "使用D3.js做視覺化儀表板，以圖表呈現資產管理數據分析",
+            "導入Jenkins整合GitLab做自動化佈署，減少上版的繁瑣流程",
+            "架設於AWS，並使用cloudfront做站台呈現",
+            "站台效能優化，減少3秒以上的載入速度"
+          ]
+        }
+      ]
+    },
+    {
+      "companyName": "RiChi Tech 瑞竣科技",
+      "title": "工程師 Engineer",
+      "time": {
+        "start": "2019/06",
+        "end": "2022/02"
+      },
+      "description": [
+        "著重於GIS方面，以地圖、圖表等方式視覺化呈現數據資料，供客戶做資料比對分析等操作",
+        "使用技術為Vue、JQuery、MS SQL與 .NET Framework"
+      ],
+      "experience": [
+        {
+          "projectName": "智慧派工系統、客戶情蒐圖台",
+          "description": [
+            "開發內部派工系統，結合Google Map作資料視覺化呈現",
+            "負責站台整體架構與開發。",
+            "對龐大資料做分行點對點的距離計算，並根據條件做篩選劃分，提供客戶進行區域性選擇派工的需求"
+          ]
+        },
+        {
+          "projectName": "地方創生專案計畫管理行政資訊網",
+          "description": [
+            "負責前端全系統介面開發，以及部分後端API開發與資料處理",
+            "行政系統，提供使用者進行管考報告填寫及管理者審核"
+          ]
+        },
+        {
+          "projectName": "GIS地理圖資查詢系統",
+          "description": [
+            "導⼊Vue，減少JQuery的使⽤以避免⼤量的Dom操作，提升效能與開發效率",
+            "獨⽴進⾏前後端新功能開發，並翻新舊系統功能",
+            "動圖產製 - 將特定時間範圍畫⾯進⾏截圖並產製成GIF",
+            "軌跡時間軸 - 刻畫播放軸UI介⾯，可以進⾏地圖軌跡播放、暫停和加速等類播放器功能，並提供使⽤者⾃訂時間以快速跳轉",
+            "透過解析後檔案，進⾏交叉⽐對出有接觸之⼈的移動軌跡，並視覺化呈現於地圖上，供使⽤者進⾏分析⽐對",
+            "針對萬筆資料進⾏資料篩選與運算，並繪製於地圖 瀏覽器效能調校處理，提升運算速度，避免瀏覽器在渲染上畫⾯凍結的問題，⼤幅提升運算效率",
+            "以視覺化儀錶板搭配地圖與路網，輔助使⽤者進⾏地點分析"
+          ]
+        },
+        {
+          "projectName": "經濟地理圖資中⼼",
+          "description": [
+            "前端架構設計，⾸⾴介⾯刻版與API開發，並加⼊延遲載⼊機制，提升網⾴載⼊效能"
+          ]
+        },
+        {
+          "projectName": "經濟地理資訊系統",
+          "description": [
+            "前後端開發，開發新功能，並進⾏舊功能擴充",
+            "產業空間⼤數據 - 以熱區圖呈現各⾏業類別或⼯業產品之聚集密度",
+            "創育專區 - 整合了創育機構資訊，讓使⽤者可透過條件設定，快速查找位置，以地圖視覺化⽅式，提供各機構鄰近交通設施與環域資訊。",
+            "圖層套疊 - 提供使⽤⾃⾏輸⼊圖層網址，進⾏服務介接，並進⾏地圖套疊"
+          ]
+        },
+        {
+          "projectName": "經濟地理圖資供應中⼼開放資料",
+          "description": [
+            "獨⽴開發API服務，提供外部進⾏介接",
+            "製作SVG⼩地圖，提供使⽤者快速搜索縣市之⼯業區"
+          ]
+        }
+      ]
+    }
+  ]
+}
