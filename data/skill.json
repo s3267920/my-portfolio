@@ -16,7 +16,7 @@
       {
         "title": "JavaScript",
         "icon": "",
-        "detail": [{ "title": "ES6" }]
+        "detail": [{ "title": "ES6" }, { "title": "JQuery" }]
       },
       {
         "title": "TypeScript"
