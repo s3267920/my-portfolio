@@ -16,7 +16,7 @@
       {
         "title": "JavaScript",
         "icon": "",
-        "detail": [{ "title": "ES6" }, { "title": "JQuery" }]
+        "detail": [{ "title": "ES6" }, { "title": "jQuery" }]
       },
       {
         "title": "TypeScript"
@@ -26,7 +26,7 @@
   "backEnd": {
     "title": "Back-End (Experience)",
     "detail": [
-      { "title": "RESTful API" },
+      { "title": "RESTful API", "detail": [{ "title": "有撰寫及介接經驗" }] },
       {
         "title": "ASP.NET"
       },
@@ -47,15 +47,16 @@
         "title": "HTML"
       },
       {
-        "title": "CSS",
-        "detail": [{ "title": "SCSS" }]
+        "title": "CSS3",
+        "detail": [{ "title": "Sass(Scss)" }]
       },
       {
-        "title": "Responsive Web Design(RWD)"
+        "title": "Responsive Web Design(RWD)",
+        "detail": ["不使用UI框架進行開發"]
       },
       {
         "title": "UI Framework",
-        "detail": [{ "title": "MUI" }]
+        "detail": [{ "title": "MUI(Material UI)" }]
       }
     ]
   },
@@ -65,7 +66,7 @@
       { "title": "Git" },
       {
         "title": "CI/CD",
-        "detail": [{ "title": "Jenkins" }]
+        "detail": [{ "title": "使用Jenkins 搭配 Gitlab 實現專案自動化部屬" }]
       },
       {
         "title": "AWS",
